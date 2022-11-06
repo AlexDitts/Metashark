@@ -1,0 +1,1 @@
+[{"model": "personnel.curator", "pk": 2, "fields": {"user": 5, "phone": "88005553555"}}, {"model": "personnel.curator", "pk": 3, "fields": {"user": 6, "phone": "88005553555"}}]
