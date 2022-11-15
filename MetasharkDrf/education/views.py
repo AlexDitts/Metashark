@@ -51,6 +51,8 @@ class StartReportApiView(APIView):
         Метод для запуска для запуска процедуры создания эксель-файла отчёта в фоновом режиме. После запуска процедуры
         """
         result = report_task.delay()
+        task_id = result.id
+        cache.set('task_id', task_id, timeout=None)
         return Response({'message': 'Начат процесс создания отчёта.',
                          'task_id': result.id})
 
